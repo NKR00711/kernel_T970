@@ -36,11 +36,6 @@ jobs:
               toolchain/llvm-arm-toolchain-ship/10.0
           fi
 
-      - name: Install gcc and clang
-        run: |
-          git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 toolchain/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
-          git clone https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0 toolchain/llvm-arm-toolchain-ship/10.0
-
       - name: Fix line endings for Kconfig files
         run: |
           find . -name "*.Kconfig" -exec dos2unix {} \;
